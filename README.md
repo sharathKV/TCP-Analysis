@@ -8,4 +8,12 @@ I have tried to demonstrate how well these two protocols coexist with each other
 - **Throughput** tells how much data is transferred per unit time from source to destination over a given period of time. Its unit is bits per second (bps).
 - **Average Flow Completion Time** measures the time taken by the sender to send the desired amount of data to the receiver. It is measured in seconds
 
-![Dumbbell Topology](https://photos.app.goo.gl/sikHPNiEk96XKsjy8)
+## Topology
+![Dumbbell Topology](https://github.com/sharathKV/TCP-Analysis/blob/master/dumbbell-topology.png)
+
+## Experiments
+- S1 sends traffic to D1 using TCP Cubic, S2 and D2 are not used in this experiment
+- S1 sends traffic to D1 and S2 sends traffic to D2, both senders will use TCP Cubic and start sending data to respective destinations simultaneously
+- S1 sends traffic to D1 using DCTCP, S2 and D2 are not used in this experiment 
+- S1 sends traffic to D1 and S2 sends traffic to D2, Both senders will use DCTCP and start sending data to respective destinations simultaneously
+- S1 sends traffic to D1 using TCP Cubic whereas S2 sends traffic to D2 using DCTCP, both senders will start sending data to respective destinations simultaneously
